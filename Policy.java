@@ -132,6 +132,7 @@ public class Policy
    {
       double baseFee = 600.0;
       double policyCost;
+      getBMI();
       double ageFee;
       if(age>50)
       {
