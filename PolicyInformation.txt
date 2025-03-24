@@ -4,8 +4,13 @@ Alice
 Jones
 20
 smoker
+<<<<<<< Updated upstream
 65.0
 110.0
+=======
+65
+110
+>>>>>>> Stashed changes
 
 3455
 Aetna
@@ -13,17 +18,29 @@ Bob
 Lee
 54
 non-smoker
+<<<<<<< Updated upstream
 72.0
 200.0
 
 3450
+=======
+72
+200
+
+2450
+>>>>>>> Stashed changes
 Met Life
 Chester
 Williams
 40
 smoker
+<<<<<<< Updated upstream
 71.0
 300.0
+=======
+71
+300
+>>>>>>> Stashed changes
 
 3670
 Global
@@ -31,8 +48,13 @@ Cindy
 Smith
 55
 non-smoker
+<<<<<<< Updated upstream
 62.0
 140.0
+=======
+62
+140
+>>>>>>> Stashed changes
 
 1490
 Reliable
@@ -40,8 +62,13 @@ Jenna
 Lewis
 30
 smoker
+<<<<<<< Updated upstream
 60.0
 105.0
+=======
+60
+105
+>>>>>>> Stashed changes
 
 3477
 State Farm
@@ -49,5 +76,10 @@ Craig
 Duncan
 23
 smoker
+<<<<<<< Updated upstream
 66.0
 215.0
+=======
+66
+215
+>>>>>>> Stashed changes
