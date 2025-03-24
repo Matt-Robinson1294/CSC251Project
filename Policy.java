@@ -1,166 +1,222 @@
 public class Policy
 {
    //create each field
-   private int policyNumber;
+   private String policyNumber;
    private String providerName;
    private String firstName;
    private String lastName;
    private int age;
-   private String smokerStatus;
+   private String smokingStatus;
    private double height;
    private double weight;
-   private double bmi;
    
    //create no-arg constructor
    public Policy()
    {
-      policyNumber = 0000;
-      providerName = "unknown";
-      firstName = "unknown";
-      lastName = "unknown";
-      age = 18; //minimum age of policy holder
-      smokerStatus = "non-smoker";
+      policyNumber = "";
+      providerName = "";
+      firstName = "";
+      lastName = "";
+      age = 0;
+      smokingStatus = "";
       height = 0.0;
       weight = 0.0;
    }
    
    //create constructor that accepts arguments
-   public Policy(int num, String provider, String first, String last, int age, String smoker, double h, double w)
+   /**
+      @param pNumber The policy number
+      @param pName The policy provider's name
+      @param first The first name of the policyholder
+      @param last The last name of the policyholder
+      @param a The age of the policyholder
+      @param sStatus The smoking status of the policyholder
+      @param h The height of the policyholder
+      @param w The weight of the policyholder
+   */
+   public Policy(String pNumber, String pName, String first, String last, int a, String sStatus, double h, double w)
    {
-      policyNumber = num;
-      providerName = provider;
+      policyNumber = pNumber;
+      providerName = pName;
       firstName = first;
       lastName = last;
-      age = age;
-      smokerStatus = smoker;
+      age = a;
+      smokingStatus = sStatus;
       height = h;
       weight = w;
    }
    
    //create mutator methods for each field
-   public void setNumber(int num)
+   /**
+      @param pNumber The policy number
+   */
+   public void setPolicyNumber(String pNumber)
    {
-      policyNumber = num;
+      policyNumber = pNumber;
    }
    
-   public void setProvider(String provider)
+   /**
+      @param pName The policy provider's name
+   */
+   public void setProviderName(String pName)
    {
-      providerName = provider;
+      providerName = pName;
    }
    
+   /**
+      @param first The first name of the policyholder
+   */
    public void setFirstName(String first)
    {
       firstName = first;
    }
    
+   /**
+      @param last The last name of the policyholder
+   */
    public void setLastName(String last)
    {
       lastName = last;
    }
    
-   public void setAge(int age)
+   /**
+      @param a The age of the policyholder
+   */
+   public void setAge(int a)
    {
-      age = age;
+      age = a;
    }
    
-   public void setSmoker(String smoker)
+   /**
+      @param sStatus The smoking status of the policyholder
+   */
+   public void setSmokingStatus(String sStatus)
    {
-      smokerStatus = smoker;
+      smokingStatus = sStatus;
    }
    
+   /**
+      @param h The height of the policyholder
+   */
    public void setHeight(double h)
    {
       height = h;
    }
    
+   /**
+      @param w The weight of the policyholder
+   */
    public void setWeight(double w)
    {
       weight = w;
    }
    
    //create accessor methods for each field
-   
-   public int getNumber()
+   /**
+      @return policyNumber The number of the policy
+   */
+   public String getPolicyNumber()
    {
       return policyNumber;
    }
    
-   public String getProvider()
+   /**
+      @return providerName The name of the provider
+   */
+   public String getProviderName()
    {
       return providerName;
    }
    
-   public String getFirst()
+   /**
+      @return firstName The first name of the policyholder
+   */
+   public String getFirstName()
    {
       return firstName;
    }
    
-   public String getLast()
+   /**
+      @return lastName The last name of the policyholder
+   */
+   public String getLastName()
    {
       return lastName;
    }
    
+   /**
+      @return age The age of the policyholder
+   */
    public int getAge()
    {
       return age;
    }
    
-   public String getSmoker()
+   /**
+      @return smokingStatus The smoking status of the policyholder
+   */
+   public String getSmokingStatus()
    {
-      return smokerStatus;
+      return smokingStatus;
    }
    
+   /**
+      @return height The height of the policyholder
+   */
    public double getHeight()
    {
       return height;
    }
    
+   /**
+      @return weight The weight of the policyholder
+   */
    public double getWeight()
    {
       return weight;
    }
    
    //create a method to calculate and return BMI
+   /**
+      @return The calculated BMI of the policyholder
+   */
    public double getBMI()
    {
-      double bmi = (weight * 703.0) / (height * height);
-      return bmi;
+      final double CONVFACTOR = 703;
+      return (weight * CONVFACTOR) / (height * height);
    }
    
    //create a method to calculate and return price of the policy
+   /**
+      return price The final cost of the policy after fees are added if needed
+   */
    public double getPrice()
    {
-      double baseFee = 600.0;
-      double policyCost;
-      getBMI();
-      double ageFee;
-      if(age>50)
+      final double BASE_PRICE = 600.0;
+      final double ADDITIONAL_FEE_AGE = 75;
+      final double ADDITIONAL_FEE_SMOKING = 100;
+      final double ADDITIONAL_FEE_PER_BMI = 20;
+      
+      final int AGE_THRESHOLD = 50;
+      final int BMI_THRESHOLD = 35;
+      
+      double price = BASE_PRICE;
+      
+      if(age > AGE_THRESHOLD) //if policymember is over 50
       {
-         ageFee = 75.0;
+         price += ADDITIONAL_FEE_AGE;
       }
-      else
+      
+      if(smokingStatus.equalsIgnoreCase("smoker")) //if policymember is a smoker
       {
-         ageFee = 0.0;
+         price += ADDITIONAL_FEE_SMOKING;
       }
-      double smokerFee;
-      if(smokerStatus.equals("smoker"))
+      
+      if(getBMI() > BMI_THRESHOLD) //if policymember BMI is over 35
       {
-         smokerFee = 100.0;
+         price += ((getBMI() - BMI_THRESHOLD) * ADDITIONAL_FEE_PER_BMI);
       }
-      else
-      {
-         smokerFee = 0.0;
-      }
-      double bmiFee;
-      if(bmi>35)
-      {
-         bmiFee = ( bmi - 35 ) * 20;
-      }
-      else
-      {
-         bmiFee = 0.0;
-      }
-      policyCost = baseFee + ageFee + smokerFee + bmiFee;
-      return policyCost;
+      
+      return price;
    }
 }
