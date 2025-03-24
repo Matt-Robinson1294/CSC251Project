@@ -5,8 +5,13 @@ Jones
 20
 smoker
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 65.0
 110.0
+=======
+65
+110
+>>>>>>> Stashed changes
 =======
 65
 110
@@ -19,15 +24,21 @@ Lee
 54
 non-smoker
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 72.0
 200.0
 
 3450
 =======
+=======
+>>>>>>> Stashed changes
 72
 200
 
 2450
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 Met Life
 Chester
@@ -35,8 +46,13 @@ Williams
 40
 smoker
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 71.0
 300.0
+=======
+71
+300
+>>>>>>> Stashed changes
 =======
 71
 300
@@ -49,8 +65,13 @@ Smith
 55
 non-smoker
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 62.0
 140.0
+=======
+62
+140
+>>>>>>> Stashed changes
 =======
 62
 140
@@ -63,8 +84,13 @@ Lewis
 30
 smoker
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 60.0
 105.0
+=======
+60
+105
+>>>>>>> Stashed changes
 =======
 60
 105
@@ -77,8 +103,13 @@ Duncan
 23
 smoker
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 66.0
 215.0
+=======
+66
+215
+>>>>>>> Stashed changes
 =======
 66
 215
