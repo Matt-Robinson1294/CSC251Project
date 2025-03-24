@@ -3,15 +3,7 @@ import java.io.*;
 
 public class Project2_Matthew_Robinson
 {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-   public static void main(String[] args)
-=======
    public static void main(String[] args) throws IOException
->>>>>>> Stashed changes
-=======
-   public static void main(String[] args) throws IOException
->>>>>>> Stashed changes
    {
       //declare variables
       String policyNumber;
@@ -51,15 +43,7 @@ public class Project2_Matthew_Robinson
          {
             smokerY += 1;
          }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-         if(smokingStatus.!equalsIgnoreCase("non-smoker"))
-=======
          if(smokingStatus.equalsIgnoreCase("non-smoker"))
->>>>>>> Stashed changes
-=======
-         if(smokingStatus.equalsIgnoreCase("non-smoker"))
->>>>>>> Stashed changes
          {
             smokerN += 1;
          }
@@ -83,20 +67,10 @@ public class Project2_Matthew_Robinson
          System.out.println("Policyholder's Weight: " + userPolicy.getWeight() + " pounds.");
          System.out.printf("Policyholder's BMI: %.2f", userPolicy.getBMI());
          System.out.printf("\nPolicy Price: $%.2f", userPolicy.getPrice());
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      }
-=======
-=======
->>>>>>> Stashed changes
          System.out.println("\n");
       }
       
       System.out.println("\nThe number of policies with a smoker is: " + smokerY);
       System.out.println("The number of policies with a non-smoker is: " + smokerN);
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
    }
 }
